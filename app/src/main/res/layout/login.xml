@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dip"
+        android:background="@drawable/background_login_div"
+        android:padding="15dip" >
+
+        <TextView
+            android:id="@+id/login_company_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:text="@string/login_label_company"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/company_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_company_input"
+            android:inputType="number"
+            />
+        <!-- 账号 -->
+
+        <TextView
+            android:id="@+id/login_user_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/company_edit"
+            android:text="@string/login_label_username"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/username_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_user_input"
+            android:hint="@string/login_username_hint"
+            android:inputType="text"
+            android:lines="1"/>
+        <!-- 密码 text -->
+
+        <TextView
+            android:id="@+id/login_password_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username_edit"
+            android:layout_marginTop="3dp"
+            android:text="@string/login_label_password"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/password_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_password_input"
+            android:inputType="textPassword"
+            />
+        <!-- 登录button -->
+
+        <CheckBox
+            android:id="@+id/cb_rem_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/button_login"
+            android:layout_alignBottom="@+id/button_login"
+            android:layout_alignParentLeft="true"
+            android:text="记住密码"
+            android:textColor="#000000" />
+
+
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/password_edit"
+            android:padding="5dip"
+            android:text="@string/login_label_signin"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/login_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/update" />
+
+        <TextView
+            android:id="@+id/login_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更新"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+</RelativeLayout>
